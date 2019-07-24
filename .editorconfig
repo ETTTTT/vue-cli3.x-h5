@@ -1,0 +1,13 @@
+#/*
+# * @Description: 编辑代码时，对键盘的一些小要求
+# * @Author: et_wl
+# * @Date: 2019-07-24 09:07:18
+# * @LastEditTime: 2019-07-24 09:20:21
+# * @LastEditors: et_wl
+# */
+
+[*.{js,jsx,ts,tsx,vue}]
+indent_style = space   # 设置缩进风格，空格space
+indent_size = 4   # 缩进的宽度，即列数，整数
+trim_trailing_whitespace = true #设为true表示会除去换行行首的任意空白字符。
+insert_final_newline = true # 设为true表明使文件以一个空白行结尾  tip:比如说这个文件的代码编辑到13行结束，但换行了一个14行作为结束的标志

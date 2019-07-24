@@ -1,0 +1,29 @@
+#/*
+# * @Description: 代码上传github时过滤的一些文件夹
+# * @Author: et_wl
+# * @Date: 2019-07-24 09:07:18
+# * @LastEditTime: 2019-07-24 09:14:52
+# * @LastEditors: et_wl
+# */
+
+.DS_Store
+node_modules
+/dist
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
