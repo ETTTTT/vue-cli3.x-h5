@@ -2,7 +2,7 @@
  * @Description:快速生成页面模板
  * @Author: et_wl
  * @Date: 2019-07-24 09:48:45
- * @LastEditTime: 2019-07-25 17:10:36
+ * @LastEditTime: 2019-07-25 18:03:08
  * @LastEditors: et_wl
  */
 
@@ -82,7 +82,7 @@ export default {
  * styl模板
  */
 const stylTpl = `
-@import "../../assets/styl/variables.styl";
+@import "../../assets/stylus/variables.styl";
 
 .${dirName}-container
     width 100%
