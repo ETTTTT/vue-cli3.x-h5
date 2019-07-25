@@ -2,7 +2,7 @@
  * @Description:代码检查规则的配置
  * @Author: et_wl
  * @Date: 2019-07-24 09:07:18
- * @LastEditTime: 2019-07-24 17:56:44
+ * @LastEditTime: 2019-07-25 16:39:51
  * @LastEditors: et_wl
  */
 
@@ -16,7 +16,7 @@ module.exports = {
   },
   'extends': [
     'plugin:vue/essential',
-    '@vue/standard'
+    '@vue/standard',
   ],
   globals: {
     GLOBAL_API_ENV:true

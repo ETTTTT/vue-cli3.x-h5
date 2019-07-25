@@ -9,7 +9,6 @@ Vue.use(Vuex)
 const isRelease = process.env.NODE_ENV === 'production' // 待处理
 
 const debug = !isRelease && process.env.NODE_ENV !== 'testing' // 待处理
-
 export default new Vuex.Store({
     ...modules,
     strict: debug,

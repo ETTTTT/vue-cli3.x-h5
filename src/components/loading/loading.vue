@@ -2,7 +2,7 @@
 <div v-if="show" class="box">
     <van-overlay z-index="10000" :show="show">
     </van-overlay>
-    <div class="loading">
+    <div class="loading" v-if="show" >
         <van-loading size="70px" type="spinner" vertical color="#000"></van-loading>
     </div>
 </div>

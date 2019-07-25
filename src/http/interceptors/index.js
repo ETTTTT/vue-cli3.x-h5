@@ -7,7 +7,7 @@ import {generateUUID} from '../../utils/uuid'
 import store from '../../store/index' // 获取token
 import errorCode from '../errorCode'
 import errorHandlers from '../errorHandlers'
-import {API_VERSION, APP_NAME, API_HOST} from '../../constants'
+import {API_VERSION, APP_NAME, API_HOST} from '../../api/api.constants'
 const commonParams = {
     __trace_id: generateUUID(APP_NAME),
     api_version: API_VERSION,

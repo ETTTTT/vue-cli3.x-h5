@@ -1,4 +1,4 @@
-import { name, apiVersion } from '../package.json'
+import { name, apiVersion } from '../../package.json'
 export const APP_NAME = name
 // 版本号每个版本记得在package.json中修改
 export const API_VERSION = apiVersion

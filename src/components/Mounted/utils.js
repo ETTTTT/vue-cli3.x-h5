@@ -8,7 +8,6 @@ export const resovleCarisokConfig = () => {
     let finalConfig = {}
     if (!window.carisokConfig) {
         window.carisokConfig = getLocalConfig()
-        // b2b跳转商城活动跳转 为window.name
         if (!_.isEmpty(window.name)) {
             try {
                 window.carisokConfig = JSON.parse(window.name)
@@ -25,7 +24,6 @@ export const resovleCarisokConfig = () => {
     }
 
     if (_.isEmpty(window.carisokConfig))  {
-        // 重置掉 window.carisokConfig
         window.carisokConfig = null
     } else {
         finalConfig = window.carisokConfig

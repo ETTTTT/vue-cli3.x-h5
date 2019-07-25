@@ -1,15 +1,11 @@
 
-;(function(){
-    var rem = document.createElement('script');
-    rem.src = './index.js';
-    document.body.appendChild(rem)
-})()
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
 import ajax from './http/ajax'
 import prepare from './components/Prepare'
+import './utils/rem'
 
 Vue.prototype.$ajax = ajax
 Vue.$store = store

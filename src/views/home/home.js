@@ -3,8 +3,7 @@ import {
     mapActions,
 } from 'vuex'
 import viewName from '../constant'
-import loading from '../../components/loading'
-
+// import loading from '../../components/Loading'
 export default {
     name: viewName.home,
     components: {
@@ -14,6 +13,7 @@ export default {
 
         }
     },
+
     computed: {
         ...mapState({
             isWeixin : ({appInfo}) => appInfo.isWeixin
@@ -27,11 +27,11 @@ export default {
         })
     },
     mounted () {
-        loading.show()
-        this.$ajax.get('getgoods').then(res => {
-            // console.log(res)
-            loading.hide()
-        })
+        // loading.show()
+        // this.$ajax.get('getgoods').then(res => {
+        //     console.log(res)
+        //     loading.hide()
+        // })
     },
     methods: {
         ...mapActions([
