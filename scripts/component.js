@@ -2,20 +2,19 @@
  * @Description:快速生成组件模板
  * @Author: et_wl
  * @Date: 2019-07-24 09:49:28
- * @LastEditTime: 2019-07-25 15:46:14
+ * @LastEditTime: 2019-07-25 17:11:24
  * @LastEditors: et_wl
  */
 
-const fs = require('fs');
-const path = require('path');
-const basePath = path.resolve(__dirname, '../src');
+const fs = require('fs')
+const path = require('path')
+const basePath = path.resolve(__dirname, '../src')
 
-const dirName = process.argv[2];
-const capPirName = dirName.substring(0, 1).toUpperCase() + dirName.substring(1);
+const dirName = process.argv[2]
 if (!dirName) {
-    console.log('文件夹名称不能为空！');
-    console.log(`示例：npm run cpt ${capPirName}`);
-    process.exit(0);
+    console.log('文件夹名称不能为空！')
+    console.log(`示例：npm run cpt ${dirName}`)
+    process.exit(0)
 }
 
 /**
@@ -57,11 +56,9 @@ export default {
 </style>
 `
 
+fs.mkdirSync(`${basePath}/components/${dirName}`) // mkdir
 
-fs.mkdirSync(`${basePath}/components/${dirName}`); // mkdir
+process.chdir(`${basePath}/components/${dirName}`) // cd views
+fs.writeFileSync(`${dirName}.vue`, VueTep) // vue
 
-process.chdir(`${basePath}/components/${dirName}`); // cd views
-fs.writeFileSync(`${dirName}.vue`, VueTep); // vue
-
-
-process.exit(0);
+process.exit(0)

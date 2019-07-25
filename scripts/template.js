@@ -2,7 +2,7 @@
  * @Description:快速生成页面模板
  * @Author: et_wl
  * @Date: 2019-07-24 09:48:45
- * @LastEditTime: 2019-07-24 14:06:38
+ * @LastEditTime: 2019-07-25 17:10:36
  * @LastEditors: et_wl
  */
 
@@ -13,9 +13,9 @@ const basePath = path.resolve(__dirname, '../src')  // 基础路径/相对路径
 // 作用就是跑npm run tpl login的时候，获取login这个名字
 // 不懂可以查看http://nodejs.cn/api/process.html#process_process_argv下面的process.argv
 const dirName = process.argv[2]
-if (!dirName && dirName != 'index') {
+if (!dirName && dirName !== 'index') {
     console.log('文件夹名称不能为空,且不能为index!')
-    console.log('示例：npm run tpl ${capPirName}')
+    console.log(`示例：npm run tpl ${dirName}`)
     process.exit(0) // 指示 Node.js 同步地终止进程
 }
 
@@ -81,7 +81,7 @@ export default {
 /**
  * styl模板
  */
-const stylTpl= `
+const stylTpl = `
 @import "../../assets/styl/variables.styl";
 
 .${dirName}-container
@@ -122,7 +122,7 @@ fs.writeFileSync(`index.vue`, vueTpl) // vue
 fs.writeFileSync(`${dirName}.js`, jsTpl) // js
 fs.writeFileSync(`${dirName}.styl`, stylTpl) // styl
 // vuex
-process.chdir(`${basePath}/store/modules`); // cd modules
+process.chdir(`${basePath}/store/modules`) // cd modules
 fs.writeFileSync(`${dirName}.js`, vuexTpl) // vuexTpl
 
 process.exit(0)
